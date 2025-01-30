@@ -162,23 +162,23 @@ class PublicDriverTest(TestCase):
             args=[self.driver.pk]
         )
 
-    def test_login_car(self):
+    def test_login_driver(self):
         result = self.client.get(self.DRIVER_LIST_URL)
         self.assertNotEqual(result.status_code, 200)
 
-    def test_login_detail_car(self):
+    def test_login_detail_driver(self):
         result = self.client.get(self.DRIVER_LOGIN_DETAIL_URL)
         self.assertNotEqual(result.status_code, 200)
 
-    def test_create_car(self):
+    def test_create_driver(self):
         result = self.client.get(self.DRIVER_CREATE_URL)
         self.assertNotEqual(result.status_code, 200)
 
-    def test_update_car(self):
+    def test_update_driver(self):
         result = self.client.get(self.DRIVER_UPDATE_URL)
         self.assertNotEqual(result.status_code, 200)
 
-    def test_delete_car(self):
+    def test_delete_driver(self):
         result = self.client.get(self.DRIVER_DELETE_URL)
         self.assertNotEqual(result.status_code, 200)
 

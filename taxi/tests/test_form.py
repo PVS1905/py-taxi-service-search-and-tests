@@ -46,6 +46,11 @@ class FormTest(TestCase):
 
     def test_driver_validate_password(self):
         form_data1 = {
+            "username": "TestDriver1",
+            "password1": "testpassword123",
+            "password2": "testpassword123",
+            "first_name": "First",
+            "last_name": "Last",
             "license_number": "ABC1234"
         }
         form1 = DriverCreationForm(data=form_data1)
@@ -53,6 +58,11 @@ class FormTest(TestCase):
         self.assertIn("license_number", form1.errors)
 
         form_data2 = {
+            "username": "TestDriver2",
+            "password1": "testpassword123",
+            "password2": "testpassword123",
+            "first_name": "First",
+            "last_name": "Last",
             "license_number": "AB012345"
         }
         form2 = DriverCreationForm(data=form_data2)
@@ -60,6 +70,11 @@ class FormTest(TestCase):
         self.assertIn("license_number", form2.errors)
 
         form_data3 = {
+            "username": "TestDriver3",
+            "password1": "testpassword123",
+            "password2": "testpassword123",
+            "first_name": "First",
+            "last_name": "Last",
             "license_number": "ABc12345"
         }
         form3 = DriverCreationForm(data=form_data3)
@@ -67,6 +82,11 @@ class FormTest(TestCase):
         self.assertIn("license_number", form3.errors)
 
         form_data4 = {
+            "username": "TestDriver4",
+            "password1": "testpassword123",
+            "password2": "testpassword123",
+            "first_name": "First",
+            "last_name": "Last",
             "license_number": "ABc1234"
         }
         form4 = DriverCreationForm(data=form_data4)
